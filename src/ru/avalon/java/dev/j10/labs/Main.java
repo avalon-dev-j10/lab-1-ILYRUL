@@ -1,18 +1,31 @@
 package ru.avalon.java.dev.j10.labs;
 
+
+import ru.avalon.java.dev.j10.labs.models.Passport;
+import ru.avalon.java.dev.j10.labs.commons.Addres;
 import ru.avalon.java.dev.j10.labs.models.Person;
 
 public class Main {
-
-    Main() {
-
+    pablic static void main(String[]args){
+        
+   
         /*
          * FIXME(Студент): Измените определение метода так, чтобы он стал точкой входа в приложение.
          */
 
         Person ivanov = null;
         Person smith = null;
+        ivanov =new Person ("Иван");
+        smith =new Person ("John");
 
+        Passport passportForIvanov = new Passport("Иванов",ivanov.getFirstName(),"Иванович");
+        ivanov.setPassport(passportForIvanov);
+        System.out.print("\n"+ passportForIvanov + "\n");
+        
+        Passport passportForSmith = new Passport(smith.getFirstName(),"Edvard","smith","");
+        smith.setPassport(passportForSmith);
+        System.out.print("\n"+ passportForSmith + "\n");
+        
         /*
          * TODO(Студент): Создайте экземпляры класса 'Person'
          *
@@ -44,12 +57,20 @@ public class Main {
          *    человека, описанного объектом, адресованным
          *    переменной 'smith'.
          */
-
+        String ivanovFullName=ivanov.getFullName();
+        String smithFullName=smith.getFullName();
+        
+        ivanov.setAddress(new Address("Saint-Peterburg","Nevskiy", 123, 5));
+        String ivanovAddress=ivanov.getAddress();
+        
+        smith.setAddress(new Address("Mexico","Francisco Sosa", 5, 2));
+        String smithAddress=smith.getAddress();
         /*
          * TODO(Студент): Выведите в консоль значения созданных строковых переменных:
          *
          * Значение каждой переменной должно быть выведено на
          * отдельной строке.
          */
+        System.out.printIn(ivanovFullName +"\n"+ smithFullName+"\n"+ ivanovAddress+"\n"+ smithAddres);
     }
 }
