@@ -13,6 +13,8 @@
  * 4. Подумайте над тем, какие методы должны быть объявлены
  *    в классе.
  */
+ 
+ 
 package ru.avalon.java.dev.j10.labs.commons;
 public class Address{
     privat String city = "not defined";
@@ -55,4 +57,4 @@ public class Address{
     public void setNumberOfApartment(int numberOfApartment) {
         this.numberOfApartment = numberOfApartment;
     }
-  
+}

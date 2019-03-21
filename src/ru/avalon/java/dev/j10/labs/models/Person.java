@@ -12,6 +12,15 @@ package ru.avalon.java.dev.j10.labs.models;
  * </ol>
  */
 public class Person {
+	private String firstName;
+	private Passport passport;
+	private Address address;
+	
+	public Person (String firstName){
+		this.firstName=firstName;
+		passport=new Passport(firstName);
+		address =new address();
+	}
 
     /*
      * TODO(Студент): Создайте класс Address.
@@ -50,7 +59,23 @@ public class Person {
         /*
          * TODO(Студент): Закончить определение метода 'getFullName()' класса 'Person'
          */
-        return null;
+        String fullName;
+		String middlename = passport.getMiddleName();
+		String lastName = passport.getLastName();
+		String secondName = passport.getSecondName();
+		
+		if(middlename==null)&&(secondName==null)
+			fullName=firstName+""+lastName;
+		else
+			if(secondName==null){
+				fullName=firstName+""+middlename+""+lastName;
+			}
+			else
+				fullName=firstName+""+((Character)secondName.charAt(0)).toString()+".;+lastName;
+			
+		
+		return fullName;
+		
     }
 
     /**
@@ -65,6 +90,20 @@ public class Person {
         /*
          * TODO(Студент): Закончить определение метода 'getAddress()' класса 'Person'
          */
-        return null;
+        return address.toString;
+	
     }
+	public String getFirsName(){
+		return firstName;
+	}
+	public Passport getPassport(){
+		return passport;
+	}
+	public void setPassport(Passport passport){
+		this.passport=passport;
+	}
+	public void setAdress(Address address){
+		this address = address;
+	}
 }
+
