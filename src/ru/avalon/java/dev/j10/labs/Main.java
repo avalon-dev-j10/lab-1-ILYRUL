@@ -2,9 +2,8 @@ package ru.avalon.java.dev.j10.labs;
 
 
 import ru.avalon.java.dev.j10.labs.models.Passport;
-import ru.avalon.java.dev.j10.labs.commons.Addres;
 import ru.avalon.java.dev.j10.labs.models.Person;
-
+import ru.avalon.java.dev.j10.labs.commons.Address;
 public class Main {
     pablic static void main(String[]args){
         

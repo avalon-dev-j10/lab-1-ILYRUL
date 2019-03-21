@@ -1,23 +1,9 @@
 package ru.avalon.java.dev.j10.labs.models;
 
-/**
- * Представление о паспортных данных человека.
- * <p>
- * Паспортные данные должны включать:
- * <ol>
- *  <li> серию и номер документа;
- *  <li> имя;
- *  <li> фамилию;
- *  <li> отчество;
- *  <li> второе имя;
- *  <li> день рождения;
- *  <li> дату выдачи;
- *  <li> орган, выдавший документ.
- * </ol>
- */
+
  public class Passport {
 	 private int serialAndNumber;
-	 private static int counterOfPasports=1;\\ количество выданных паспартов
+	 private static int counterOfPasports=1;// количество выданных паспартов
 private String firstName;
 private String secondName;
 private String middleName;
@@ -33,7 +19,7 @@ this.firstName = firstName;
 this(firstName);
 this.lastName = lastName;
 serialAndNumber = counterOfPasports++;
-	}
+}
 	public Passport(String lastName,String firstName,String middleName){
 this(lastName, firstName);
 this.middleName = middleName;
@@ -70,7 +56,7 @@ public void setOrganization(String organization){
 }
 
 public void setSerialAndNuber(String serialAndNumber){
-		this.serialAndNumber=serialAndNumber;
+		this.serialAndNumber = serialAndNumber;
 		
 }
 public int getSerialAndNuber(){
@@ -116,9 +102,9 @@ else
 
 passportinfo+="middleName:not defined"+"\n";
 
-pssportinfo += "lastName"+lastName+"\n"+"serialAndNumber:"+serialAndNumber+"\n"+
-"birthday:"+birthday+"\n""dateOflssue"+dateOflssue+"\n"+"organization:"+organization;
-}
+pssportinfo += "\n"+birthday+"lastName"+lastName+"\n"+"serialAndNumber:"+serialAndNumber+
+        "\n"+"birthday:""dateOflssue"+dateOflssue+"\n"+"organization:"+organization;
+
  }
  
 
@@ -126,24 +112,4 @@ pssportinfo += "lastName"+lastName+"\n"+"serialAndNumber:"+serialAndNumber+"\n"+
 
 
 
-    /*
-     * TODO(Студент): Закончить определение класса.
-     *
-     * 1. Объявить атрибуты класса.
-     *
-     * 2. Определить необходимые методы класса. Подумайте о
-     *    том, какие методы должны существовать в классе,
-     *    чтобы обеспечивать получение всей необходимой
-     *    информации о состоянии объектов данного класса.
-     *    Все ли поля обязательно будут проинициализированы
-     *    при создании экземпляра?
-     *
-     * 3. Создайте все необходимые конструкторы класса.
-     *
-     * 4. Помните о возможности существования перегруженных
-     *    конструкторов.
-     *
-     * 5. Обеспечте возможность использования класса за
-     *    пределами пакета.
-     */
-}
+   
