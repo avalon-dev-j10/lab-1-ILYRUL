@@ -1,13 +1,14 @@
 package ru.avalon.java.dev.j10.labs.models;
 
 
- public class Passport {
-	 private int serialAndNumber;
-	 private static int counterOfPasports=1;// количество выданных паспартов
-private String firstName;
-private String secondName;
-private String middleName;
-private String lastName;
+    public class Passport {
+        private int serialAndNumber;
+	private static int counterOfPasports=1;// количество выданных паспартов
+         
+    private String firstName;
+    private String secondName;
+    private String middleName;
+    private String lastName;
 
 private String birthday = "not defined";
 private String dateOflssue = "not defined";
@@ -21,12 +22,12 @@ this.lastName = lastName;
 serialAndNumber = counterOfPasports++;
 }
 	public Passport(String lastName,String firstName,String middleName){
-this(lastName, firstName);
-this.middleName = middleName;
+        this(lastName, firstName);
+        this.middleName = middleName;
 	}
 	public Passport(String secondName, String lastName,String firstName,String middleName){
-this(lastName, firstName);
-this.secondName = secondName;
+        this(lastName, firstName);
+        this.secondName = secondName;
 
 	}
 	public void setFirstName(String firstName){
@@ -55,7 +56,7 @@ public void setOrganization(String organization){
 		this.organization=organization;
 }
 
-public void setSerialAndNuber(String serialAndNumber){
+public void setserialAndNuber(String serialAndNumber){
 		this.serialAndNumber = serialAndNumber;
 		
 }
@@ -70,7 +71,7 @@ public String getFirstName(){
 public String getSecondName(){
 		return secondName;
 }
-public String getMidleName(){
+public String getMiddleName(){
 		return middleName;
 }
 public String getLastName(){
@@ -85,11 +86,11 @@ public String getDateOfissue(){
 public String getOrganization(){
 		return organization;
 }
-@Override
+
 public String toString(){
-	String pssportinfo="firstName"+firstName+"\n";
+	String passportinfo="firstName"+firstName+"\n";
 	if (secondName!=null)
-	pssportinfo += "firstName"+firstName+"\n";
+	passportinfo += "firstName"+firstName+"\n";
 
 else 
 	
@@ -97,19 +98,16 @@ passportinfo +="secondName: not defined"+"\n";
 
 if (middleName!=null)
 
-	pssportinfo += "middleName"+middleName+"\n";
+	passportinfo += "middleName"+middleName+"\n";
 else	
 
-passportinfo+="middleName:not defined"+"\n";
+passportinfo += "middleName:not defined"+"\n";
 
-pssportinfo += "\n"+birthday+"lastName"+lastName+"\n"+"serialAndNumber:"+serialAndNumber+
-        "\n"+"birthday:""dateOflssue"+dateOflssue+"\n"+"organization:"+organization;
+passportinfo += "\n" + birthday + "lastName" + lastName +
+        "\n" + "serialAndNumber" + serialAndNumber +
+        "\n"  + "birthday" , "dateOflssue" + dateOflssue
+                + "\n" + "organization:" + organization;
+            return null;
 
- }
- 
-
-
-
-
-
-   
+}
+}
