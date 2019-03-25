@@ -11,31 +11,32 @@ public class Main {
     public static void main(String[]args){
         
    
-        Person ivanov = null;
-        Person smith = null;
-        ivanov =new Person ("Иван");
-        smith =new Person ("John");
+        Passport passportIvanov = new Passport("Иван", "Иванов");
+        passportIvanov.setPatronymic("Иванович");
+        Passport passportSmith = new Passport("John", "Smith");
+        passportSmith.setSecondName("Edvard");
 
-        Passport passportForIvanov = new Passport("Иванов",ivanov.getFirstName(),"Иванович");
-        ivanov.setPassport(passportForIvanov);
-        System.out.print("\n"+ passportForIvanov + "\n");
-        
-        Passport passportForSmith = new Passport(smith.getFirstName(),"Edvard","smith","");
-        smith.setPassport(passportForSmith);
-        System.out.print("\n"+ passportForSmith + "\n");
-        
-        
+
+        Address addressIvanov = new Address(196411, "Россия", "Санкт-Петербург", "Невский", 32);
+       Address addressSmith = new Address(945899, "USA", "Washington", "Constitution", 17);
+
+
+        Person ivanov = new Person(passportIvanov, addressIvanov);
+        Person smith = new Person(passportSmith, addressSmith);
 
         
-        String ivanovFullName=ivanov.getFullName();
-        String smithFullName=smith.getFullName();
+
+        String fullNameIvanov = ivanov.getFullName();
+        String fullNameSmith = smith.getFullName();
+
+        String adressIvanov = ivanov.getAddress();
+        String adressSmith = smith.getAddress();
         
-        ivanov.setAddress(new Address("Saint-Peterburg","Nevskiy", 123, 5));
-        String ivanovAddress=ivanov.getAddress();
+
+        System.out.println(fullNameIvanov);
+        System.out.println(fullNameSmith);
+        System.out.println(adressIvanov);
+        System.out.println(adressSmith);
         
-        smith.setAddress(new Address("Mexico","Francisco Sosa", 5, 2));
-        String smithAddress=smith.getAddress();
-        
-        System.out.println(ivanovFullName +"\n"+ smithFullName+"\n"+ ivanovAddress+"\n"+ smithAddress);
     }
 }

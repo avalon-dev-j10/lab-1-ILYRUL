@@ -2,56 +2,23 @@ package ru.avalon.java.dev.j10.labs.models;
 
 
 public class Person {
-	private String firstName;
-	private Passport passport;
-	private Address address;
-	
-	public Person (String firstName){
-		this.firstName=firstName;
-		passport=new Passport(firstName);
-		address =new Address();
-	}
 
-    
+        private Passport passport;
+        private Address address;
 
-    public String getFullName() {
-       
-        String fullName;
-	String middlename = passport.getMiddleName();
-	String lastName = passport.getLastName();
-	String secondName = passport.getSecondName();
-		
-	if (middleName == null) && (secondName == null)
-	 fullName=firstName + "" + lastName;
-		else
-		if(secondName==null){
-		fullName=firstName+""+middlename+""+lastName;
-		}
-		else
-		fullName=""+firstName+((Character)secondName.charAt(0)).toString()+ "." +lastName;
-			
-		
-		return fullName;
-		
+    public Person (Passport passport, Address address) {
+        this.address = address;
+        this.passport = passport;
     }
 
     
+    
+    public String getFullName() {
+        return passport.getFullName();
+    }
+   
     public String getAddress() {
         
-        return address.toString;
-	
+        return address.getFullAdress();
     }
-	public String getFirstName(){
-		return firstName;
-	}
-	public Passport getPassport(){
-		return passport;
-	}
-	public void setPassport(Passport passport){
-		this.passport=passport;
-	}
-	public void setAddress(Address address){
-		this address = address;
-	}
 }
-
