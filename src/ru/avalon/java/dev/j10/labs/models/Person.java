@@ -10,15 +10,13 @@ public class Person {
         this.address = address;
         this.passport = passport;
     }
-
-    
+  
     
     public String getFullName() {
-        return passport.getFullName();
+    return passport.getFullName();
     }
    
     public String getAddress() {
-        
-        return address.getFullAdress();
+    return address.getFullAdress();
     }
 }

@@ -17,14 +17,11 @@ public class Main {
         passportSmith.setSecondName("Edvard");
 
 
-        Address addressIvanov = new Address(196411, "Россия", "Санкт-Петербург", "Невский", 32);
+       Address addressIvanov = new Address(196411, "Россия", "Санкт-Петербург", "Невский", 32);
        Address addressSmith = new Address(945899, "USA", "Washington", "Constitution", 17);
-
 
         Person ivanov = new Person(passportIvanov, addressIvanov);
         Person smith = new Person(passportSmith, addressSmith);
-
-        
 
         String fullNameIvanov = ivanov.getFullName();
         String fullNameSmith = smith.getFullName();
@@ -32,7 +29,6 @@ public class Main {
         String adressIvanov = ivanov.getAddress();
         String adressSmith = smith.getAddress();
         
-
         System.out.println(fullNameIvanov);
         System.out.println(fullNameSmith);
         System.out.println(adressIvanov);

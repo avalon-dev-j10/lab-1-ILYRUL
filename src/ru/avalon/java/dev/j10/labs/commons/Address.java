@@ -1,8 +1,6 @@
 package ru.avalon.java.dev.j10.labs.commons;
 
 public class Address {
-
-    
                 
    
  private int postcode;
@@ -10,7 +8,6 @@ public class Address {
     private String city;
     private String street;
     private int house;
-
 
     public Address (int postcode, String country,String city,
             String street,int house) {
@@ -20,8 +17,7 @@ public class Address {
         this.street = street;
         this.house = house;
     }
-    
-    
+        
     public int getPostcode() { return postcode; }
     public String getCountry() { return country; }
     public String getCity() { return city; }
@@ -42,5 +38,4 @@ public class Address {
             return house + ", " + street + ", " + city + ", " + country + ", " + postcode;
         }           
     }
-
 }
