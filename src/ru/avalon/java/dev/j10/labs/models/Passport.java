@@ -14,9 +14,10 @@ import java.util.Date;
     private Date issue  ;
     private String department; //орган, выдавший документ
     
+    /* TODO (Проверка №1)
+        Добавить коментарии к полям и методам класса
+    */
     
-    
-
     public Passport(String name,
                     String surname) {
         this.name = name;
@@ -37,7 +38,12 @@ import java.util.Date;
         this.department = department;
     }
 
-   
+   /* TODO (Проверка №1)
+        Добавить конструкторы без возможно отсутствующих параметров - отчестово,
+        второе имя и перегрузить их через конструктор со всеми параметрами.
+        Лишние конструкторы удалить!!!
+    */
+    
     public String getPassportData() {
             return "Номер паспорта: \t" + serial + "\n" +
                    "Дата рождения: \t" + birthsday + "\n" +
@@ -64,7 +70,7 @@ import java.util.Date;
     public void setSerial(int serial) { this.serial = serial; }
     public void setSurname(String surname) { this.surname = surname; }
     
-    
+
     public String getFullName() {
         if (secondName != null) {
             return name + " " + secondName.charAt(0) + ". " + surname;
@@ -74,5 +80,9 @@ import java.util.Date;
             return surname + " " + name + " " + patronymic;
         }
     }
-
+    /*  TODO (Проверка №1)
+        Метод   public String getFullName() должен быть реализован в классе Person,
+        по условию задачи.
+    */
+    
 }
