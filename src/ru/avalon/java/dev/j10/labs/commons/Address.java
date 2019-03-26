@@ -1,8 +1,6 @@
 package ru.avalon.java.dev.j10.labs.commons;
 
 public class Address {
-
-    
                 
    
  private int postcode;
@@ -10,7 +8,11 @@ public class Address {
     private String city;
     private String street;
     private int house;
-
+    
+    /* TODO (Проверка №1)
+        Добавить поля - область, корпус, квартира
+        Добавить коментарии к полям и методам класса
+    */
 
     public Address (int postcode, String country,String city,
             String street,int house) {
@@ -21,6 +23,10 @@ public class Address {
         this.house = house;
     }
     
+    /* TODO (Проверка №1)
+        Добавить конструкторы без возможно отсутствующих параметров - квартира,
+        корпус и перегрузить их через конструктор со всеми параметрами
+    */
     
     public int getPostcode() { return postcode; }
     public String getCountry() { return country; }
@@ -42,5 +48,9 @@ public class Address {
             return house + ", " + street + ", " + city + ", " + country + ", " + postcode;
         }           
     }
-
+    
+    /*  TODO (Проверка №1)
+        Метод  public String getFullAdress() должен быть реализован в классе Person,
+        по условию задачи.
+    */
 }
