@@ -50,6 +50,10 @@ import java.time.LocalDate;
         this.number = number;
         this.name = name;
         this.surname = surname;
+        
+        /*  TODO (Замечания№2 ЛР№1)
+            - Данный конструктор реализовать через конструктор с полным набором параметров!
+        */
     }
     
     

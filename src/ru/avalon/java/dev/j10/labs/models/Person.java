@@ -38,6 +38,13 @@ public class Person {
         
         
         return null;
+        
+        /*  TODO (Замечания№2 ЛР№1)
+            - Вариант, когда у человека есть Второе имя, но нет Отчества не корректно
+            работает!. Исправить!!!
+            - Есть вероятность, что ни одно из условий не выполниться и метод вернет null!
+            Исправить!
+        */
     }
    
     public String getAddress() {
@@ -48,5 +55,8 @@ public class Person {
                + address.getCity() + " " + address.getStreet() + " " +
                address.getHouse() + "  " + address.getBlock() + " " + address.getAapartment();
 
+        /*  TODO (Замечания№2 ЛР№1)
+            - При выводе адреса в нем не должно быть значений null. Исправить!!!
+        */
     }
 }
