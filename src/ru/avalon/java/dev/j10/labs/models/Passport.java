@@ -1,78 +1,102 @@
 package ru.avalon.java.dev.j10.labs.models;
 
-import java.util.Date;
+
+
+import java.time.LocalDate;
 
 
    public class Passport {
 
-    private int serial;
-    private String name;
-    private String surname;
+    private String serial;//серия
+    private int number;//номер паспорта
+    private String name;//имя
+    private String surname;//фамилия
     private String patronymic; //отчество
-    private String secondName;
-    private Date birthsday ;
-    private Date issue  ;
+    private String secondName;//второе имя
+    private LocalDate birthsday ;// Дата рождения
+    private LocalDate issue  ;// дата выдачи
     private String department; //орган, выдавший документ
     
     
-    
-
-    public Passport(String name,
-                    String surname) {
+     //  все параметры
+    public Passport(String serial, int number, String name, String surname,
+        String patronymic, String secondName, LocalDate birthsday, LocalDate issue, String department) {
+        this.serial = serial;
+        this.number = number;
         this.name = name;
         this.surname = surname;
-    }
-
-    
-    public Passport(String name,
-                    String surname,
-                    int serial,
-                    Date birthsday,
-                    Date issue,
-                    String department) {
-        this(name,surname);
-        this.serial = serial;
+        this.patronymic = patronymic;
+        this.secondName = secondName;
         this.birthsday = birthsday;
         this.issue = issue;
         this.department = department;
     }
+    //    без отчества
+    public Passport(String serial, int number, String name, String surname, 
+        String secondName, LocalDate birthsday, LocalDate issue, String department) {
+        this (serial, number, name,  surname, null, secondName, birthsday,issue,department );
+                
+    }
+    //  без отчества и второго имени  
+    public Passport(String serial, int number, String name, String surname,
+            LocalDate birthsday, LocalDate issue, String department) {
+        this (serial, number, name,  surname, null, null ,birthsday,issue,department );
+        
+       
+    }
+    //  без отчества , второго имени,отчества, второго имени,даты рождения,даты выдачи и органа выдавшего документ
+    public Passport(String serial, int number, String name, String surname) {
+        this.serial = serial;
+        this.number = number;
+        this.name = name;
+        this.surname = surname;
+    }
+    
+    
+    public String getSerial() {
+        return serial;
+    }
+    public int getNumber() {
+        return number;
+    }
+    public String getName() { 
+        return name; 
+    }
+    public String getSurname() {
+        return surname;
+    }
+    public String getPatronymic() {
+        return patronymic; 
+    }
+    public String getSecondName() {
+        return secondName; 
+    }
+    public LocalDate getBirthsday() {
+        return birthsday;
+    }
+    public LocalDate getIssue() {
+        return issue;
+    }
+    public String getDepartment() { 
+        return department; 
+    }
+    
+    
+    
+    
+
+    
+
+    
+    
 
    
-    public String getPassportData() {
-            return "Номер паспорта: \t" + serial + "\n" +
-                   "Дата рождения: \t" + birthsday + "\n" +
-                   "Дата выдачи: \t" + issue + "\n" +
-                   "Кем выдан: \t" + department;
-    } 
     
     
-    public String getName() { return name; }
-    public String getSurname() { return surname; }
-    public String getPatronymic() { return patronymic; }
-    public String getSecondName() { return secondName; }
-    public String getDepartment() { return department; }
-    public Date getBirthsday() { return birthsday; }
-    public Date getIssue() { return issue; }
-    public int getSerial() { return serial; }
-
-    public void setBirthsday(Date birthsday) { this.birthsday = birthsday; }
-    public void setDepartment(String department) { this.department = department; }
-    public void setIssue(Date issue) { this.issue = issue; }
-    public void setName(String name) { this.name = name; }
-    public void setPatronymic(String patronymic) { this.patronymic = patronymic; }
-    public void setSecondName(String secondName) { this.secondName = secondName; }
-    public void setSerial(int serial) { this.serial = serial; }
-    public void setSurname(String surname) { this.surname = surname; }
     
     
-    public String getFullName() {
-        if (secondName != null) {
-            return name + " " + secondName.charAt(0) + ". " + surname;
-        } else if (secondName == null && patronymic == null) {
-            return name + " " + surname;
-        } else {
-            return surname + " " + name + " " + patronymic;
-        }
-    }
+    
+    
+    
 
 }
