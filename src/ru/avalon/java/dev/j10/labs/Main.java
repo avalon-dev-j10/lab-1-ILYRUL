@@ -28,12 +28,18 @@ public class Main {
                 new Address( 945899,"USA" , null,null, "Washington","Constitution",50,0,10));
         
       
+        
+        
+        
 
         String fullNameIvanov = ivanov.getFullName();
         String fullNameSmith = smith.getFullName();
 
         String adressIvanov = ivanov.getAddress();
         String adressSmith = smith.getAddress();
+        
+        
+        
         
 
         System.out.println(fullNameIvanov);
