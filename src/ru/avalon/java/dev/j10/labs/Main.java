@@ -17,18 +17,18 @@ public class Main {
                
     
         
-        ivanov = new Person ( new Passport("4000", 554433,"Иван", "Иванов","Иванович", null,
+        ivanov = new Person ( new Passport("4000", 554433,"Иван", "Иванов","Иванович", "",
         LocalDate.of (1950,05,20), LocalDate.of(2018, 03, 10), "О/М"),
-                 new Address(195280,"Россия" ,null,null, "Санкт-Петербург","Невский",32,1,345));
+                 new Address(195280,"Россия" ,"","", "Санкт-Петербург","Невский",32,1,345));
         
 
 
-        smith = new Person ( new Passport("54", 45644654,null,"John", "Smith","Edvard",
+        smith = new Person ( new Passport("54", 45644654,"John", "Smith","Edvard","",
         LocalDate.of (1950,05,20), LocalDate.of(2018, 03, 10), "polis"),
-                new Address( 945899,"USA" , null,null, "Washington","Constitution",50,0,10));
+                new Address( 945899,"USA" , "","", "Washington","Constitution",50,0,10));
         
         /*  TODO (Замечания№2 ЛР№1)
-            - Неправильный ввод значений для ivanov. Исправить!!!
+            - Неправильный ввод значений для ivanov. Исправить!!! Исправил
         */
         
       
@@ -37,18 +37,19 @@ public class Main {
         
 
         String fullNameIvanov = ivanov.getFullName();
-        String fullNameSmith = smith.getFullName();
-
         String adressIvanov = ivanov.getAddress();
+
+        
+        
+        String fullNameSmith = smith.getFullName();
         String adressSmith = smith.getAddress();
         
         
         
-        
-
         System.out.println(fullNameIvanov);
-        System.out.println(fullNameSmith);
         System.out.println(adressIvanov);
+       
+        System.out.println(fullNameSmith);
         System.out.println(adressSmith);
         
     }

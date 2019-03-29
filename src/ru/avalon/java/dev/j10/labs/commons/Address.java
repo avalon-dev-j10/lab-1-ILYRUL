@@ -19,6 +19,7 @@ public class Address {
         this.postcode = postcode;
         this.country = country;
         this.oblast = oblast;
+        this.city =city ;
         this.district = district;
         this.street = street;
         this.house = house;

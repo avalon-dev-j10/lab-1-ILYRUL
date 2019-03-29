@@ -41,20 +41,25 @@ import java.time.LocalDate;
     public Passport(String serial, int number, String name, String surname,
             LocalDate birthsday, LocalDate issue, String department) {
         this (serial, number, name,  surname, null, null ,birthsday,issue,department );
-        
+          
+    }
+         //  без  второго имени  
+    public Passport(String serial, String name,int number ,String surname, 
+            String patronymic, LocalDate birthsday, LocalDate issue, String department) {
+        this (serial, number, name,  surname,patronymic ,null, birthsday,issue,department );
        
-    }
-    //  без отчества , второго имени,отчества, второго имени,даты рождения,даты выдачи и органа выдавшего документ
+     }
+    
+    //  без отчества , второго имени,даты рождения,даты выдачи и органа выдавшего документ
     public Passport(String serial, int number, String name, String surname) {
-        this.serial = serial;
-        this.number = number;
-        this.name = name;
-        this.surname = surname;
-        
+        this (serial, number, name,  surname, null, null ,null,null,null );
+     }   
+    
         /*  TODO (Замечания№2 ЛР№1)
-            - Данный конструктор реализовать через конструктор с полным набором параметров!
-        */
-    }
+            - Данный конструктор реализовать через конструктор с полным набором параметров!  Исправил
+        */  
+
+    
     
     
     public String getSerial() {
