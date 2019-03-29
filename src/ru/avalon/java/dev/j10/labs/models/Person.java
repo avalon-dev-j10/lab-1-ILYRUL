@@ -4,8 +4,8 @@ import  ru.avalon.java.dev.j10.labs.commons.Address ;
 
 public class Person {
 
-        private Passport passport;
-        private Address address;
+    private Passport passport;
+    private Address address;
 
     public Person (Passport passport, Address address) {
         this.address = address;
@@ -33,8 +33,8 @@ public class Person {
         //   После Инициала второго имени должна стоять точка.
         
          else if (passport.getPatronymic() == null && passport.getSecondName() != null){
-            return passport.getName() + "  " + passport.getSecondName().charAt(0)+ "." 
-                    +"" + passport.getSurname() ;
+            return passport.getName() + "  " + passport.getSecondName().charAt(0)+ ". " 
+                    + passport.getSurname() ;
          }
          
         //  Если у человека Отчество и второе имя невозможно, 
@@ -55,6 +55,8 @@ public class Person {
             - Есть вероятность, что ни одно из условий не выполниться и метод вернет null!
             Исправить! Исправил
         */
+        
+        
     }
    
     public String getAddress() {

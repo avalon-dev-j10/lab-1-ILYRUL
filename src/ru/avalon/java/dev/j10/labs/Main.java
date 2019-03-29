@@ -17,7 +17,7 @@ public class Main {
                
     
         
-        ivanov = new Person ( new Passport("4000", 554433,"Иван", "Иванов","Иванович", "",
+        ivanov = new Person ( new Passport("4000", 554433,"Иван", "Иванов", null, "Сергей", 
         LocalDate.of (1950,05,20), LocalDate.of(2018, 03, 10), "О/М"),
                  new Address(195280,"Россия" ,"","", "Санкт-Петербург","Невский",32,1,345));
         
